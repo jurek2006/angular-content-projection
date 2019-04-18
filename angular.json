@@ -136,5 +136,10 @@
       }
     }
   },
-  "defaultProject": "angular-content-projection"
+  "defaultProject": "angular-content-projection",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
