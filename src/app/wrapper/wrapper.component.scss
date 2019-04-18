@@ -1,0 +1,24 @@
+/* ostylowanie hosta */
+:host {
+  display: flex;
+  border: 1px solid red;
+}
+
+/* ostylowanie elementu z ng-content */
+.inside-content {
+  border: 1px solid blue;
+  color: blue;
+}
+
+:host ::ng-deep div {
+  flex-grow: 1;
+}
+
+:host ::ng-deep .green {
+  border: 1px solid green;
+  color: green;
+}
+:host ::ng-deep .red {
+  border: 1px solid red;
+  color: red;
+}
