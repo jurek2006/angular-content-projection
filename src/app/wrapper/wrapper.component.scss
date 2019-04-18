@@ -4,21 +4,25 @@
   border: 1px solid red;
 }
 
-/* ostylowanie elementu z ng-content */
+/* ostylowanie elementu z ng-content - nie zadziała */
 .inside-content {
   border: 1px solid blue;
   color: blue;
 }
 
-:host ::ng-deep div {
-  flex-grow: 1;
-}
+/* ostylowanie elementu z ng-content */
+:host ::ng-deep {
+  div {
+    flex-grow: 1;
+  }
 
-:host ::ng-deep .green {
-  border: 1px solid green;
-  color: green;
-}
-:host ::ng-deep .red {
-  border: 1px solid red;
-  color: red;
+  .green {
+    border: 1px solid green;
+    color: green;
+  }
+
+  .red {
+    border: 1px solid red;
+    color: red;
+  }
 }
