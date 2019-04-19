@@ -1,11 +1,4 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  ContentChild,
-  OnChanges,
-  AfterContentInit
-} from "@angular/core";
+import { Component, Input, ContentChild, HostBinding } from "@angular/core";
 import { InputRefDirective } from "./input-ref.directive";
 
 @Component({
@@ -17,6 +10,10 @@ export class FaInputComponent {
   @Input() icon: string;
 
   @ContentChild(InputRefDirective) input: InputRefDirective;
+
+  @HostBinding("class.focus") get focus() {
+    return this.input ? this.input.focus : false;
+  }
 
   get classes() {
     const cssClasses = {

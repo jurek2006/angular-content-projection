@@ -1,9 +1,17 @@
 :host {
   display: inline-block;
-  border: 1px solid;
+  border: 1px solid #cccccc;
+}
+
+:host.focus {
+  border: 1px solid blue;
 }
 
 :host ::ng-deep input {
   border: none;
   outline: none;
+}
+
+.fa {
+  margin-right: 0.5em;
 }
